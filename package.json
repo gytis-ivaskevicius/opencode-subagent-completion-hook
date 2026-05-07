@@ -28,7 +28,7 @@
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target bun --format esm && tsc --emitDeclarationOnly",
     "check": "tsc --noEmit",
-    "publish": "bun run build && npm publish --access public"
+    "publish": "bun run build && bun publish --access public"
   },
   "devDependencies": {
     "@opencode-ai/plugin": "^1.0.0",
