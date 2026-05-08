@@ -3,6 +3,12 @@ import type { Plugin } from "@opencode-ai/plugin"
 export const SubagentCompletion: Plugin = async ({ client, $, directory }) => {
 
   return {
+    "chat.params": async (incoming, output) => {
+      // Remove on_complete before it reaches the provider
+      if (output.options?.on_complete) {
+        delete output.options.on_complete
+      }
+    },
     "tool.execute.after": async (input, output) => {
       if (input.tool !== "task") return
 
