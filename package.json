@@ -1,6 +1,6 @@
 {
   "name": "opencode-subagent-completion-hook",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Subagent completion plugin for OpenCode which allows to execute arbitrary command on completion",
   "type": "module",
   "main": "./dist/index.js",
@@ -28,7 +28,7 @@
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target bun --format esm && tsc --emitDeclarationOnly",
     "check": "tsc --noEmit",
-    "publish": "bun run build && npm publish --access public"
+    "release": "bun run build && npm publish --access public"
   },
   "devDependencies": {
     "@opencode-ai/plugin": "^1.0.0",
